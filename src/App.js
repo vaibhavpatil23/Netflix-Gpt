@@ -1,12 +1,8 @@
-
-import './App.css';
+import "./App.css";
+import Body from "./Componant/Body";
 
 function App() {
-  return (
-    <div className="text-3xl font-bold text-amber-500">
-     Hello Evryone, Let's Build the Netflix
-    </div>
-  );
+  return <Body />;
 }
 
 export default App;
