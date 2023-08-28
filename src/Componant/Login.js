@@ -1,11 +1,34 @@
-import React from 'react'
+import React from "react";
+import Header from "./Header";
 
 const Login = () => {
   return (
     <div>
-      Login
+      <Header />
+      <div className="absolute">
+        <img
+          src="https://assets.nflxext.com/ffe/siteui/vlv3/00103100-5b45-4d4f-af32-342649f1bda5/64774cd8-5c3a-4823-a0bb-1610d6971bd4/IN-en-20230821-popsignuptwoweeks-perspective_alpha_website_large.jpg"
+          alt=""
+        />{" "}
+      </div>
+      <form className="w-3/12 absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-80">
+        <h1 className="font-bold text-3xl py-4">Sing in</h1>
+        <input
+          type="text"
+          placeholder="Email Address"
+          className="p-4 my-2 w-full bg-slate-700"
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          className="p-4 my-2 w-full bg-slate-700"
+        />
+        <button className="p-4 my-6 bg-red-800 w-full rounded-lg">
+          Sing in
+        </button>
+      </form>
     </div>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;
