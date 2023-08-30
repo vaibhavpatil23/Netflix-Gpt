@@ -6,7 +6,7 @@ const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMassege, setErrorMassege] = useState(null);
 
-  const name = useRef(null)
+  const name = useRef(null);
   const email = useRef(null);
   const password = useRef(null);
 
@@ -41,13 +41,12 @@ const Login = () => {
         </h1>
         {!isSignInForm && (
           <input
-          ref={name}
+            ref={name}
             type="text"
             placeholder="Full Name"
             className="p-4 my-2 w-full bg-slate-700"
           />
         )}
-
         <input
           ref={email}
           type="text"
