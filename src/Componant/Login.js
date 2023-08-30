@@ -65,7 +65,7 @@ const Login = () => {
           className="p-4 my-6 bg-red-800 w-full rounded-lg"
           onClick={handleButtonClick}
         >
-          {isSignInForm ? "Sign In" : "Sign Up"}{" "}
+          {isSignInForm ? "Sign In" : "Sign Up"}
         </button>
         <p className="p-4 cursor-pointer" onClick={toggleSignInForm}>
           {isSignInForm
