@@ -1,7 +1,11 @@
 import React, { useRef, useState } from "react";
 import Header from "./Header";
 import { checkValidaData } from "../Utils/validation";
-import {getAuth, createUserWithEmailAndPassword} from "firebase/auth"
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
+import { auth } from "../Utils/firebase";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
@@ -17,17 +21,40 @@ const Login = () => {
       email.current.value,
       password.current.value
     );
-    setErrorMassege(massege)
-   if(!massege) return
-   
-   if(!isSignInForm){
+    setErrorMassege(massege);
+    if (massege) return;
 
-   }
-   else{
-
-   }
-   
-
+    if (!isSignInForm) {
+      createUserWithEmailAndPassword(
+        auth,
+        email.current.value,
+        password.current.value
+      )
+        .then((userCredential) => {
+          const user = userCredential.user;
+          console.log(user);
+        })
+        .catch((error) => {
+          const errorCode = error.Code;
+          const errorMassege = error.massege;
+          setErrorMassege(errorCode + "-" + errorMassege);
+        });
+    } else {
+      signInWithEmailAndPassword(
+        auth,
+        email.current.value,
+        password.current.value
+      )
+        .then((userCredential) => {
+          const user = userCredential.user;
+          console.log(user)
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMassege = error.massege;
+          setErrorMassege(errorCode+ "-"+errorMassege)
+        });
+    }
   };
 
   const toggleSignInForm = () => {
