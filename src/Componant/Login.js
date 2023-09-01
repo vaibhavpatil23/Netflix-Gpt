@@ -8,11 +8,14 @@ import {
 } from "firebase/auth";
 import { auth } from "../Utils/firebase";
 import {useNavigate} from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addUser } from "../Utils/userSlice";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMassege, setErrorMassege] = useState(null);
   const Navigate = useNavigate()
+  const dispatch = useDispatch
 
   const name = useRef(null);
   const email = useRef(null);
@@ -38,6 +41,15 @@ const Login = () => {
             displayName : "name.current.value", photoURL:"https://avatars.githubusercontent.com/u/121111728?v=4"
           })
           .then (()=>{
+            const { uid, email, displayName, photoURL } = auth.currentUser;
+            dispatch(
+              addUser({
+                uid: uid,
+                email: email,
+                displayName: displayName,
+                photoURL: photoURL,
+              })
+            );
             Navigate("/browse")
 
           })
