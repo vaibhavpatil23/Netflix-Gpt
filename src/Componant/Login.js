@@ -17,7 +17,6 @@ const Login = () => {
 
   const handleButtonClick = () => {
     const massege = checkValidaData(
-      name.current.value,
       email.current.value,
       password.current.value
     );
