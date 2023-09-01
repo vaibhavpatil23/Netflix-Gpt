@@ -4,9 +4,10 @@ import { checkValidaData } from "../Utils/validation";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  updateProfile,
 } from "firebase/auth";
 import { auth } from "../Utils/firebase";
-import { Navigate, useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
@@ -33,8 +34,16 @@ const Login = () => {
       )
         .then((userCredential) => {
           const user = userCredential.user;
-          console.log(user);
-          Navigate("/browse")
+          updateProfile(user,{
+            displayName : "name.current.value", photoURL:"https://avatars.githubusercontent.com/u/121111728?v=4"
+          })
+          .then (()=>{
+            Navigate("/browse")
+
+          })
+          .catch ((error)=> {
+            setErrorMassege(error.massege)
+          })
         })
         .catch((error) => {
           const errorCode = error.Code;
