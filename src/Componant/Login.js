@@ -35,7 +35,7 @@ const Login = () => {
         email.current.value,
         password.current.value
       )
-        .then((userCredential) => {
+        .then((userCredential) => { 
           const user = userCredential.user;
           updateProfile(user,{
             displayName : "name.current.value", photoURL:"https://avatars.githubusercontent.com/u/121111728?v=4"
