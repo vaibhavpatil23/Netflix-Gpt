@@ -18,5 +18,4 @@ const Maincontainer = () => {
     </div>
   );
 };
-
 export default Maincontainer;
