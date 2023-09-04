@@ -5,13 +5,15 @@ import Videobackgraund from "./Videobackgraund";
 
 const Maincontainer = () => {
   const movies = useSelector((store) => store.movies?.nowPlayingMovies);
-  if (movies == null) return;
+  if (!movies) return;
 
   const mainMovie = movies(0);
   console.log(mainMovie);
+
+  const  {original_title, overview} = mainMovie
   return (
     <div>
-      <VideoTitel />
+      <VideoTitel titel= {original_title} overview = {overview}/>
       <Videobackgraund />
     </div>
   );
