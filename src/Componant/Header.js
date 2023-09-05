@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { onAuthStateChanged } from "firebase/auth";
-// import { Auth } from "firebase/auth";
 import { addUser, removeUser } from "../Utils/userSlice";
 import { LOGO } from "../Utils/Constant";
 
