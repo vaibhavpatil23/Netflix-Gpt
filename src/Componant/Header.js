@@ -8,7 +8,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { addUser, removeUser } from "../Utils/userSlice";
 import { LOGO } from "../Utils/Constant";
 
-const Header = () => {
+ const Header = () => {
   const dispatch = useDispatch;
   const navigate = useNavigate();
   const user = useSelector((store) => store.user);
