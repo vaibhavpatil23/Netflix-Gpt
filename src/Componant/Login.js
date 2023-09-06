@@ -14,7 +14,7 @@ import { USER_AVATAR } from "../Utils/Constant";
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMassege, setErrorMassege] = useState(null);
-  const dispatch = useDispatch
+  const dispatch = useDispatch;
 
   const name = useRef(null);
   const email = useRef(null);
@@ -34,26 +34,26 @@ const Login = () => {
         email.current.value,
         password.current.value
       )
-        .then((userCredential) => { 
+        .then((userCredential) => {
           const user = userCredential.user;
-          updateProfile(user,{
-            displayName : "name.current.value", photoURL:USER_AVATAR,
+          updateProfile(user, {
+            displayName: "name.current.value",
+            photoURL: USER_AVATAR,
           })
-          .then (()=>{
-            const { uid, email, displayName, photoURL } = auth.currentUser;
-            dispatch(
-              addUser({
-                uid: uid,
-                email: email,
-                displayName: displayName,
-                photoURL: photoURL,
-              })
-            );
-
-          })
-          .catch ((error)=> {
-            setErrorMassege(error.massege)
-          })
+            .then(() => {
+              const { uid, email, displayName, photoURL } = auth.currentUser;
+              dispatch(
+                addUser({
+                  uid: uid,
+                  email: email,
+                  displayName: displayName,
+                  photoURL: photoURL,
+                })
+              );
+            })
+            .catch((error) => {
+              setErrorMassege(error.massege);
+            });
         })
         .catch((error) => {
           const errorCode = error.Code;
@@ -68,13 +68,11 @@ const Login = () => {
       )
         .then((userCredential) => {
           const user = userCredential.user;
-         
-
         })
         .catch((error) => {
           const errorCode = error.code;
           const errorMassege = error.massege;
-          setErrorMassege(errorCode+ "-"+errorMassege)
+          setErrorMassege(errorCode + "-" + errorMassege);
         });
     }
   };
