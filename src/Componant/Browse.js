@@ -3,14 +3,13 @@ import Header from "./Header";
 import Maincontainer from "./Maincontainer";
 import Secondarycontainer from "./Secondarycontainer";
 
-
 const Browse = () => {
-  useNowPlayingMovies()
+  useNowPlayingMovies();
   return (
     <div>
       <Header />
-      <Maincontainer/>
-      <Secondarycontainer/>
+      <Maincontainer />
+      <Secondarycontainer />
     </div>
   );
 };
