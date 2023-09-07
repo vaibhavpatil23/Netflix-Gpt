@@ -9,7 +9,7 @@ const Maincontainer = () => {
 
   const mainMovie = movies(0);
   console.log(mainMovie);
-  
+
   const { original_title, overview } = mainMovie;
   return (
     <div>
@@ -19,4 +19,3 @@ const Maincontainer = () => {
   );
 };
 export default Maincontainer;
-                                                                                   

@@ -9,9 +9,7 @@ const VideoTitel = ({ titel, overview }) => {
         <button className="bg-gray-500 text-white p-4 px-12 text-lg bg-opacity-50 rounded-lg">
           ⏯️ Play
         </button>
-        <button className="mx-2 bg-gray-500 text-white p-4 px-12 text-lg bg-opacity-50 rounded-lg">
-          More Info
-        </button>
+        <button className="mx-2 bg-gray-500 text-white p-4 px-12 text-lg bg-opacity-50 rounded-lg"></button>
       </div>
     </div>
   );
