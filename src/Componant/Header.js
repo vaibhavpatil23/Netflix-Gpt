@@ -56,4 +56,4 @@ import { LOGO } from "../Utils/Constant";
   );
 };
 
-export default Header;
+export default Header;  
