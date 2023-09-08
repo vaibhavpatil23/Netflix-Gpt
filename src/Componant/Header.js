@@ -8,7 +8,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { addUser, removeUser } from "../Utils/userSlice";
 import { LOGO } from "../Utils/Constant";
 
- const Header = () => {
+const Header = () => {
   const dispatch = useDispatch;
   const navigate = useNavigate();
   const user = useSelector((store) => store.user);
@@ -41,12 +41,12 @@ import { LOGO } from "../Utils/Constant";
     return () => unsubscribe();
   }, []);
   return (
-    <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between">
+    <div className="absolute w-screen px-7 py-2 bg-gradient-to-b from-black z-10 flex justify-between">
       <img className="w-44" src={LOGO} alt="" />
 
       {user && (
         <div className="flex p-2">
-          <img className="w-12 h-12" src={user?.photoURL} alt="" />
+          <img className="w-12 h-11" src={user?.photoURL} alt="" />
           <button onClick={handleSignOut} className="font-bold text-white">
             (Sign Out)
           </button>
@@ -56,4 +56,4 @@ import { LOGO } from "../Utils/Constant";
   );
 };
 
-export default Header;  
+export default Header;
