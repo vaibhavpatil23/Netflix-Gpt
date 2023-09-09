@@ -1,3 +1,4 @@
+import { eventWrapper } from "@testing-library/user-event/dist/utils";
 import React from "react";
 
 const VideoTitel = ({ titel, overview }) => {
@@ -15,4 +16,4 @@ const VideoTitel = ({ titel, overview }) => {
   );
 };
 
-export default VideoTitel; 
+export default VideoTitel;  
