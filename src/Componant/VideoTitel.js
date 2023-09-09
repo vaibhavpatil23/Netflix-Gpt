@@ -15,4 +15,4 @@ const VideoTitel = ({ titel, overview }) => {
   );
 };
 
-export default VideoTitel;
+export default VideoTitel; 
