@@ -41,12 +41,12 @@ const Header = () => {
     return () => unsubscribe();
   }, []);
   return (
-    <div className="absolute w-screen px-7 py-2 bg-gradient-to-b from-black z-10 flex justify-between">
+    <div className="absolute w-screen px-7 py-3 bg-gradient-to-b from-black z-10 flex justify-between">
       <img className="w-44" src={LOGO} alt="" />
 
       {user && (
-        <div className="flex p-2">
-          <img className="w-12 h-11" src={user?.photoURL} alt="" />
+        <div className="flex p-3">
+          <img className="w-12 h-10" src={user?.photoURL} alt="" />
           <button onClick={handleSignOut} className="font-bold text-white">
             (Sign Out)
           </button>
