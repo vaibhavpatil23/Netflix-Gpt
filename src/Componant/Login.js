@@ -90,7 +90,7 @@ const Login = () => {
       </div>
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="w-3/12 absolute p-11 bg-black my-36 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-80"
+        className="w-3/12 absolute p-11 bg-black my-34 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-80"
       >
         <h1 className="font-bold text-3xl py-4">
           {isSignInForm ? "Sign In" : "Sign Up"}
@@ -100,7 +100,7 @@ const Login = () => {
             ref={name}
             type="text"
             placeholder="Full Name"
-            className="p-4 my-2 w-full bg-slate-700"
+            className="p-4 my-2 w-full bg-slate-600"
           />
         )}
         <input
