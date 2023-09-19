@@ -77,7 +77,7 @@ const Login = () => {
     }
   };
   const toggleSignInForm = () => {
-    setIsSignInForm(!isSignInForm);  
+    setIsSignInForm(!isSignInForm);
   };
   return (
     <div>
