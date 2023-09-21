@@ -1,4 +1,4 @@
-import { eventWrapper } from "@testing-library/user-event/dist/utils";
+// import { eventWrapper } from "@testing-library/user-event/dist/utils";
 import React from "react";
 
 const VideoTitel = ({ titel, overview }) => {
@@ -7,7 +7,7 @@ const VideoTitel = ({ titel, overview }) => {
       <h1 className="text-6xl font-bold">{titel}</h1>
       <p className="py-6 text-lg w-1/4">{overview}</p>
       <div className="my-4  ">
-        <button className="bg-gray-500 text-white p-4 px-12 text-lg bg-opacity-50 rounded-lg">
+        <button className="bg-gray-500 text-white p-4 px-11 text-lg bg-opacity-50 rounded-lg">
           ⏯️ Play
         </button>
         <button className="mx-2 bg-gray-500 text-white p-4 px-12 text-lg bg-opacity-50 rounded-lg"></button>
