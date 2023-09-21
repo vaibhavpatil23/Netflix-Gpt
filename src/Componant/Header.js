@@ -40,8 +40,8 @@ const Header = () => {
     return () => unsubscribe();
   }, []);
   return (
-    <div className="absolute w-screen px-7 py-3 bg-gradient-to-b from-black z-10 flex justify-between">
-      <img className="w-44" src={LOGO} alt="" />
+    <div className="absolute w-screen px-7 py-4 bg-gradient-to-b from-black z-10 flex justify-between">
+      <img className="w-42" src={LOGO} alt="" />
       {user && (
         <div className="flex p-3">
           <img className="w-12 h-10" src={user?.photoURL} alt="" />
