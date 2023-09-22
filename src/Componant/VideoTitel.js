@@ -1,6 +1,5 @@
 // import { eventWrapper } from "@testing-library/user-event/dist/utils";
 import React from "react";
-
 const VideoTitel = ({ titel, overview }) => {
   return (
     <div className="pt-36 px-6">
