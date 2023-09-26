@@ -15,14 +15,14 @@ const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMassege, setErrorMassege] = useState(null);
   const dispatch = useDispatch;
-
+  
   const name = useRef(null);
   const email = useRef(null);
   const password = useRef(null);
 
   const handleButtonClick = () => {
     const massege = checkValidaData(
-      email.current.value,
+      email.current.value, 
       password.current.value
     );
     setErrorMassege(massege);
