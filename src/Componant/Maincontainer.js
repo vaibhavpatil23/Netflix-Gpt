@@ -14,8 +14,8 @@ const Maincontainer = () => {
   return (
     <div>
       <VideoTitel titel={original_title} overview={overview} />
-      <Videobackgraund />
+      <Videobackgraund/>
     </div>
   );
-};
+}; 
 export default Maincontainer;
