@@ -24,10 +24,9 @@ const Login = () => {
     const massege = checkValidaData(
       email.current.value,
       password.current.value
-    );
+    ); 
     setErrorMassege(massege);
     if (massege) return;
-
     if (!isSignInForm) {
       createUserWithEmailAndPassword(
         auth,
