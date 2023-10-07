@@ -11,5 +11,5 @@ const Videobackgraund = ({ movieId }) => {
     </div>
   );
 };
-
 export default Videobackgraund;
+ 
