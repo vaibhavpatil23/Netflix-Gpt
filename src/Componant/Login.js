@@ -96,7 +96,7 @@ const Login = () => {
         </h1>
         {!isSignInForm && (
           <input
-            ref={name}
+            ref={name} 
             type="text"
             placeholder="Full Name"
             className="p-4 my-2 w-full bg-slate-600"
