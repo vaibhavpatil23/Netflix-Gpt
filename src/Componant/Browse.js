@@ -11,7 +11,7 @@ const Browse = () => {
       <Maincontainer />
       <Secondarycontainer />
     </div>
-  );
+  ); 
 };
 
 export default Browse;
