@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import VideoTitel from "./ ";
-import Videobackgraund from "./Videobackgraund"; 
+import Videobackgraund from "./Videobackgraund";
 
 const Maincontainer = () => {
   const movies = useSelector((store) => store.movies?.nowPlayingMovies);
@@ -19,3 +19,4 @@ const Maincontainer = () => {
   );
 };
 export default Maincontainer;
+                        
