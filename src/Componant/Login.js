@@ -13,7 +13,7 @@ import { USER_AVATAR } from "../Utils/Constant";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
-  const [errorMassege, setErrorMassege] = useState(null);                                                                                                                                                                                                                     
+  const [errorMassege, setErrorMassege] = useState(null);
   const dispatch = useDispatch;
 
   const name = useRef(null);
@@ -52,7 +52,7 @@ const Login = () => {
             })
             .catch((error) => {
               setErrorMassege(error.massege);
-            }); 
+            });
         })
         .catch((error) => {
           const errorCode = error.Code;
@@ -64,7 +64,7 @@ const Login = () => {
         auth,
         email.current.value,
         password.current.value
-      ) 
+      )
         .then((userCredential) => {
           const user = userCredential.user;
         })
@@ -78,7 +78,7 @@ const Login = () => {
   const toggleSignInForm = () => {
     setIsSignInForm(!isSignInForm);
   };
-  return ( 
+  return (
     <div>
       <Header />
       <div className="absolute">
