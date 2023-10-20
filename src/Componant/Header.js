@@ -23,7 +23,7 @@ const Header = () => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         const { uid, email, displayName, photoURL } = user;
-        dispatch( 
+        dispatch(
           addUser({
             uid: uid,
             email: email,
@@ -46,12 +46,11 @@ const Header = () => {
         <div className="flex p-3">
           <img className="w-12 h-10" src={user?.photoURL} alt="" />
           <button onClick={handleSignOut} className="font-bold text-white">
-            (Sign Out)
+            (Sign Out) 
           </button>
         </div>
       )}
     </div>
   );
-};
-
+}; 
 export default Header;

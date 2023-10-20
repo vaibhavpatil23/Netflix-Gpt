@@ -7,10 +7,10 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { auth } from "../Utils/firebase";
-import { useDispatch } from "react-redux";                                      
+import { useDispatch } from "react-redux";
 import { addUser } from "../Utils/userSlice";
 import { USER_AVATAR } from "../Utils/Constant";
-  
+
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMassege, setErrorMassege] = useState(null);
@@ -19,8 +19,8 @@ const Login = () => {
   const name = useRef(null);
   const email = useRef(null);
   const password = useRef(null);
-   
-  const handleButtonClick = () => {
+
+  const handleButtonClick = () => {                                                                                                                                                                                                                                                                                         
     const massege = checkValidaData(
       email.current.value,
       password.current.value
@@ -28,7 +28,7 @@ const Login = () => {
     setErrorMassege(massege);
     if (massege) return;
     if (!isSignInForm) {
-      createUserWithEmailAndPassword( 
+      createUserWithEmailAndPassword(
         auth,
         email.current.value,
         password.current.value
@@ -39,7 +39,6 @@ const Login = () => {
             displayName: "name.current.value",
             photoURL: USER_AVATAR,
           })
-        
             .then(() => {
               const { uid, email, displayName, photoURL } = auth.currentUser;
               dispatch(
@@ -49,7 +48,7 @@ const Login = () => {
                   displayName: displayName,
                   photoURL: photoURL,
                 })
-              ); 
+              );
             })
             .catch((error) => {
               setErrorMassege(error.massege);
@@ -65,7 +64,7 @@ const Login = () => {
         auth,
         email.current.value,
         password.current.value
-      ) 
+      )
         .then((userCredential) => {
           const user = userCredential.user;
         })
