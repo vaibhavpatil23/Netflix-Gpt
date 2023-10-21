@@ -109,7 +109,7 @@ const Login = () => {
           className="p-4 my-2 w-full bg-slate-700"
         />
         <input
-          ref={password}
+          ref={password} 
           type="password"
           placeholder="Password"
           className="p-4 my-2 w-full bg-slate-700"
