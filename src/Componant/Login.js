@@ -9,7 +9,7 @@ import {
 import { auth } from "../Utils/firebase";
 import { useDispatch } from "react-redux";
 import { addUser } from "../Utils/userSlice";
-import { USER_AVATAR } from "../Utils/Constant";
+import { USER_AVATAR } from "../Utils/Constant";                                                          
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
@@ -20,9 +20,9 @@ const Login = () => {
   const email = useRef(null);
   const password = useRef(null);
 
-  const handleButtonClick = () => {                                                                                                                                                                                                                                                                                         
-    const massege = checkValidaData(
-      email.current.value,
+  const handleButtonClick = () => {
+    const massege = checkValidaData( 
+      email.current.value, 
       password.current.value
     );
     setErrorMassege(massege);
@@ -109,7 +109,7 @@ const Login = () => {
           className="p-4 my-2 w-full bg-slate-700"
         />
         <input
-          ref={password} 
+          ref={password}
           type="password"
           placeholder="Password"
           className="p-4 my-2 w-full bg-slate-700"
