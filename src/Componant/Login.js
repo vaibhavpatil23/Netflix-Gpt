@@ -8,20 +8,20 @@ import {
 } from "firebase/auth";
 import { auth } from "../Utils/firebase";
 import { useDispatch } from "react-redux";
-import { addUser } from "../Utils/userSlice";  
+import { addUser } from "../Utils/userSlice";
 import { USER_AVATAR } from "../Utils/Constant";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMassege, setErrorMassege] = useState(null);
   const dispatch = useDispatch;
-  
+
   const name = useRef(null);
   const email = useRef(null);
-  const password = useRef(null);
+  const password = useRef(null); 
 
   const handleButtonClick = () => {
-    const massege = checkValidaData( 
+    const massege = checkValidaData(
       email.current.value,
       password.current.value
     );
@@ -32,7 +32,7 @@ const Login = () => {
         auth,
         email.current.value,
         password.current.value
-      ) 
+      )
         .then((userCredential) => {
           const user = userCredential.user;
           updateProfile(user, {
@@ -74,7 +74,7 @@ const Login = () => {
           setErrorMassege(errorCode + "-" + errorMassege);
         });
     }
-  }; 
+  };
   const toggleSignInForm = () => {
     setIsSignInForm(!isSignInForm);
   };
@@ -102,18 +102,7 @@ const Login = () => {
             className="p-4 my-2 w-full bg-slate-600"
           />
         )}
-        <input
-          ref={email}
-          type="text"
-          placeholder="Email Address"
-          className="p-4 my-2 w-full bg-slate-700"
-        />
-        <input
-          ref={password}
-          type="password"
-          placeholder="Password"
-          className="p-4 my-2 w-full bg-slate-700"
-        />
+        <input ref={email} className="p-4 my-2 w-full bg-slate-700" />
         <p className="text-red-600 font-bold p-2">{errorMassege}</p>
         <button
           className="p-4 my-6 bg-red-800 w-full rounded-lg"
