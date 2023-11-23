@@ -11,11 +11,11 @@ const Maincontainer = () => {
   console.log(mainMovie);
 
   const { original_title, overview } = mainMovie;
-  return (  
+  return (
     <div>
       <VideoTitel titel={original_title} overview={overview} />
       <Videobackgraund />
     </div>
   );
 };
-export default Maincontainer;
+export default Maincontainer;    
