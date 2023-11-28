@@ -87,7 +87,7 @@ const Login = () => {
           alt=""
         />
       </div>
-      <form
+      <form 
         onSubmit={(e) => e.preventDefault()}
         className="w-3/12 absolute p-11 bg-black my-34  mx-auto right-0 left-0 text-white rounded-lg bg-opacity-80"
       >
@@ -95,7 +95,7 @@ const Login = () => {
           {isSignInForm ? "Sign In" : "Sign Up"}
         </h1>
         {!isSignInForm && (
-          <input
+          <input   
             ref={name}
             type="text"
             placeholder="Full Name"
